@@ -1,0 +1,38 @@
+const mongoose = require('mongoose');
+
+const ProductSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  sku: { type: String, required: true, unique: true },
+  description: { type: String, required: true },
+  main_category: { type: String, required: true },
+  subcategory: { type: String },
+  category: { type: String },
+  brand: { type: String, required: true, default: "No Brand" },
+  tags: [{ type: String }],
+  unit: { type: String },
+  main_image: { type: String },
+  additional_images: [{ type: String }],
+  video_url: { type: String },
+  is_new: { type: Boolean, default: true },
+  attributes: [{ type: String }],
+  variants: [{ type: String }],
+  price: { type: Number, required: true },
+  salePrice: { type: Number },
+  discount: { type: Number, default: 0 },
+  stockQuantity: { type: Number, required: true },
+  specifications: [{ type: String }],
+  reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
+  ratings: { type: Number, default: 0 },
+  shipping_options: { type: String },
+  shipping_dimensions: { type: String },
+  shipping_cost: { type: String },
+  handling_time: { type: String },
+  returnPolicy: { type: String },
+  warranty: { type: String },
+  status: { type: String, enum: ['active', 'inactive', 'discontinued'], default: 'active' },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  updatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  featured: [{ type: String }],
+}, { timestamps: true });
+
+module.exports = mongoose.model('Product', ProductSchema);
