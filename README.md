@@ -94,19 +94,6 @@ Follow these steps to get the Inventory Management System up and running locally
 
 ---
 
-## Screenshots:
-
-### SignUp Form:
-![SignUp Form](https://github.com/maryamameen34/stock-master/blob/main/Screenshot%202024-11-05%20075707.png)
-
-### Inventory Table View:
-![Inventory Table View](https://github.com/maryamameen34/stock-master/blob/main/Screenshot%202024-11-05%20090055.png)
-
-### Inventory Grid View:
-![Inventory Grid View](https://github.com/maryamameen34/stock-master/blob/main/Screenshot%202024-11-05%20090238.png)
-
-### Single Page View:
-![Single Page View](https://github.com/maryamameen34/stock-master/blob/main/Screenshot%202024-11-05%20090159.png)
 
 ---
 
